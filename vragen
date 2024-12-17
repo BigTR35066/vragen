@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toegangscontrole, Preventie en Repressie Vragen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .question {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .score {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            background-color: #e7f2e7;
+            border: 1px solid #4CAF50;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .true-result {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .false-result {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Toegangscontrole, Preventie en Repressie Vragen</h1>
+
+<!-- Vragen sectie -->
+<div class="section" id="vragen">
+    <h2>01 Toegangscontrole</h2>
+    <div class="question">
+        <h3>1. Wat is het hoofddoel van toegangscontrole op personen?</h3>
+        <button class="button" onclick="checkAnswer(1, 'A', this)">A) Ongeschreven goederen weren.</button>
+        <button class="button" onclick="checkAnswer(1, 'B', this)">B) Ongeschreven personen weren.</button>
+        <button class="button" onclick="checkAnswer(1, 'C', this)">C) De beveiligers fitter maken.</button>
+        <button class="button" onclick="checkAnswer(1, 'D', this)">D) Onbevoegden en ongewenste goederen weren.</button>
+        <div id="result1" class="result"></div>
+    </div>
+    <div class="question">
+        <h3>2. Wie wordt beschouwd als een onbevoegd persoon?</h3>
+        <button class="button" onclick="checkAnswer(2, 'A', this)">A) Een aangekondigde bezoeker.</button>
+        <button class="button" onclick="checkAnswer(2, 'B', this)">B) Een personeelslid tijdens werktijden.</button>
+        <button class="button" onclick="checkAnswer(2, 'C', this)">C) Een klant die zonder toestemming het magazijn binnengaat.</button>
+        <button class="button" onclick="checkAnswer(2, 'D', this)">D) Een leverancier die vooraf is ingelicht.</button>
+        <div id="result2" class="result"></div>
+    </div>
+    <div class="question">
+        <h3>3. Wat is een gangbare procedure bij het toelaten van bezoekers?</h3>
+        <button class="button" onclick="checkAnswer(3, 'A', this)">A) Ze worden direct toegelaten zonder identificatie.</button>
+        <button class="button" onclick="checkAnswer(3, 'B', this)">B) Ze moeten zich identificeren met een legitimatiebewijs.</button>
+        <button class="button" onclick="checkAnswer(3, 'C', this)">C) Ze mogen geen tassen meenemen.</button>
+        <button class="button" onclick="checkAnswer(3, 'D', this)">D) Ze moeten wachten in de lunchruimte.</button>
+        <div id="result3" class="result"></div>
+    </div>
+
+    <h2>02 Preventie en Repressie</h2>
+    <div class="question">
+        <h3>4. Wat betekent het begrip 'preventie'?</h3>
+        <button class="button" onclick="checkAnswer(4, 'A', this)">A) Handelingen na een ongewenste gebeurtenis.</button>
+        <button class="button" onclick="checkAnswer(4, 'B', this)">B) Het voorkomen van ongewenste situaties.</button>
+        <button class="button" onclick="checkAnswer(4, 'C', this)">C) Het alarmeren van hulpdiensten.</button>
+        <button class="button" onclick="checkAnswer(4, 'D', this)">D) Het onderzoeken van incidenten.</button>
+        <div id="result4" class="result"></div>
+    </div>
+    <div class="question">
+        <h3>5. Welke van de volgende situaties betreft preventief handelen?</h3>
+        <button class="button" onclick="checkAnswer(5, 'A', this)">A) Je houdt een verdachte aan bij een winkeldiefstal.</button>
+        <button class="button" onclick="checkAnswer(5, 'B', this)">B) Je wijst een roker in een opslagruimte erop dat dit gevaarlijk is.</button>
+        <button class="button" onclick="checkAnswer(5, 'C', this)">C) Je alarmeert de brandweer bij een brand.</button>
+        <button class="button" onclick="checkAnswer(5, 'D', this)">D) Je schrijft een rapport over een bedrijfsongeval.</button>
+        <div id="result5" class="result"></div>
+    </div>
+    <div class="question">
+        <h3>6. Wat is een belangrijk doel van repressief handelen?</h3>
+        <button class="button" onclick="checkAnswer(6, 'A', this)">A) Onveilige situaties voorkomen.</button>
+        <button class="button" onclick="checkAnswer(6, 'B', this)">B) Informatie verzamelen over de dader.</button>
+        <button class="button" onclick="checkAnswer(6, 'C', this)">C) Schade en gevolgen van een ongewenste gebeurtenis beperken.</button>
+        <button class="button" onclick="checkAnswer(6, 'D', this)">D) Preventieve maatregelen initiëren.</button>
+        <div id="result6" class="result"></div>
+    </div>
+
+    <h2>03 Proactief Beveiligen</h2>
+    <div class="question">
+        <h3>7. Wat betekent proactief beveiligen?</h3>
+        <button class="button" onclick="checkAnswer(7, 'A', this)">A) Handelen na een incident.</button>
+        <button class="button" onclick="checkAnswer(7, 'B', this)">B) Actief handelen om dreigingen te voorkomen.</button>
+        <button class="button" onclick="checkAnswer(7, 'C', this)">C) Het uitsluiten van technische hulpmiddelen.</button>
+        <button class="button" onclick="checkAnswer(7, 'D', this)">D) Alleen gebruik maken van politie.</button>
+        <div id="result7" class="result"></div>
+    </div>
+    <div class="question">
+        <h3>8. Wat zijn verdachte indicatoren?</h3>
+        <button class="button" onclick="checkAnswer(8, 'A', this)">A) Normaal gedrag.</button>
+        <button class="button" onclick="checkAnswer(8, 'B', this)">B) Afwijkingen van de norm die mogelijk duiden op een dreiging.</button>
+        <button class="button" onclick="checkAnswer(8, 'C', this)">C) Regelgeving voor beveiligers.</button>
+        <button class="button" onclick="checkAnswer(8, 'D', this)">D) Technische hulpmiddelen.</button>
+        <div id="result8" class="result"></div>
+    </div>
+    <div class="question">
+        <h3>9. Wat houdt Security Questioning in?</h3>
+        <button class="button" onclick="checkAnswer(9, 'A', this)">A) Vragen stellen om meer informatie te krijgen.</button>
+        <button class="button" onclick="checkAnswer(9, 'B', this)">B) Het negeren van verdachte indicatoren.</button>
+        <button class="button" onclick="checkAnswer(9, 'C', this)">C) Het controleren van personeel.</button>
+        <button class="button" onclick="checkAnswer(9, 'D', this)">D) Het beëindigen van gesprekken.</button>
+        <div id="result9" class="result"></div>
+    </div>
+
+    <h2>04 Brandveiligheid</h2>
+    <div class="question">
+        <h3>10. Wat is een brandklasse?</h3>
+        <button class="button" onclick="checkAnswer(10, 'A', this)">A) Een groep brandbare stoffen met dezelfde kenmerken.</button>
+        <button class="button" onclick="checkAnswer(10, 'B', this)">B) Een niveau van brandbeveiliging.</button>
+        <button class="button" onclick="checkAnswer(10, 'C', this)">C) Een groep van blusmiddelen.</button>
+        <button class="button" onclick="checkAnswer(10, 'D', this)">D) Een type brandalarm.</button>
+        <div id="result10" class="result"></div>
+    </div>
+    <div class="question">
+        <h3>11. Wat is de functie van een CO2-blusser?</h3>
+        <button class="button" onclick="checkAnswer(11, 'A', this)">A) Het afdekken van brandbare stoffen.</button>
+        <button class="button" onclick="checkAnswer(11, 'B', this)">B) Het verlagen van de temperatuur.</button>
+        <button class="button" onclick="checkAnswer(11, 'C', this)">C) Het verdrijven van zuurstof.</button>
+        <button class="button" onclick="checkAnswer(11, 'D', this)">D) Het creëren van nevenschade.</button>
+        <div id="result11" class="result"></div>
+    </div>
+    <div class="question">
+        <h3>12. Wat moet je doen als je ontdekt dat er brand is?</h3>
+        <button class="button" onclick="checkAnswer(12, 'A', this)">A) Proberen te blussen.</button>
+        <button class="button" onclick="checkAnswer(12, 'B', this)">B) Alarmeren.</button>
+        <button class="button" onclick="checkAnswer(12, 'C', this)">C) Weglopen.</button>
+        <button class="button" onclick="checkAnswer(12, 'D', this)">D) Niemand inlichten.</button>
+        <div id="result12" class="result"></div>
+    </div>
+</div>
+
+<!-- Resultaat sectie -->
+<div class="score" id="score"></div>
+
+<script>
+const answers = {
+    1: 'D', 2: 'C', 3: 'B', 4: 'B', 5: 'B',
+    6: 'C', 7: 'B', 8: 'B', 9: 'A', 10: 'A',
+    11: 'C', 12: 'B'
+};
+
+const explanations = {
+    1: "Correct! Het hoofddoel van toegangscontrole is onbevoegden en ongewenste goederen te weren.",
+    2: "Correct! Een klant die zonder toestemming het magazijn binnengaat is een onbevoegd persoon.",
+    3: "Correct! Het is gebruikelijk dat bezoekers zich identificeren met een legitimatiebewijs.",
+    4: "Correct! Preventie betekent het voorkomen van ongewenste situaties.",
+    5: "Correct! Het wijzen van een roker op gevaar is een voorbeeld van preventief handelen.",
+    6: "Correct! Repressief handelen is bedoeld om schade en gevolgen van een ongewenste gebeurtenis te beperken.",
+    7: "Correct! Proactief beveiligen betekent actief handelen om dreigingen te voorkomen.",
+    8: "Correct! Verdachte indicatoren zijn afwijkingen van de norm die mogelijk duiden op een dreiging.",
+    9: "Correct! Security Questioning houdt in vragen stellen om meer informatie te krijgen.",
+    10: "Correct! Een brandklasse is een groep brandbare stoffen met dezelfde kenmerken.",
+    11: "Correct! De functie van een CO2-blusser is het verdrijven van zuurstof.",
+    12: "Correct! Bij het ontdekken van brand moet je alarmeren."
+};
+
+let correctCount = 0; // Aantal goede antwoorden
+const questionCount = Object.keys(answers).length; // Totaal aantal vragen
+
+function checkAnswer(questionNumber, selectedAnswer, clickedButton) {
+    const resultDiv = document.getElementById(`result${questionNumber}`);
+
+    // Deactiveer alle knoppen voor de huidige vraag
+    const buttons = clickedButton.parentElement.querySelectorAll('.button');
+    buttons.forEach(button => button.disabled = true);
+
+    // Controleer het gegeven antwoord
+    const correctAnswer = answers[questionNumber];
+
+    // Controleer of het antwoord niet leeg is
+    if (selectedAnswer === '') {
+        resultDiv.innerHTML = ''; // Laat leeg bij onvolledige vraag
+    } else if (selectedAnswer === correctAnswer) {
+        resultDiv.innerHTML = `<div class="true-result">${explanations[questionNumber]}</div>`;
+        correctCount++; // Verhoog correctCount
+    } else {
+        resultDiv.innerHTML = `<div class="false-result">Fout! Het juiste antwoord is ${correctAnswer}. ${explanations[questionNumber]}</div>`;
+    }
+
+    // Bereken en toon de score
+    displayScore();
+}
+
+function displayScore() {
+    const scoreDiv = document.getElementById("score");
+    const wrongCount = questionCount - correctCount; // Aantal verkeerde antwoorden
+    const scorePercentage = (correctCount / questionCount) * 10; // Score uit 10
+    scoreDiv.innerHTML = `<strong>Juiste antwoorden:</strong> ${correctCount}, <strong>Foute antwoorden:</strong> ${wrongCount}, <strong>Score:</strong> ${scorePercentage.toFixed(1)}/10`;
+}
+</script>
+
+</body>
+</html>
